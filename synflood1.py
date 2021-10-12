@@ -1,4 +1,4 @@
-import rand as rand
+import rand as rand #This code is written by Dina and Ryan
 from scapy.all import *
 import random as rand
 dest=str(sys.argv[1])#the users input the ip destination as the first argument after the filename when running the attack
