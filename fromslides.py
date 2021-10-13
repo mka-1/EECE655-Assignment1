@@ -1,4 +1,4 @@
-from scapy.all import *
+from scapy.all import * #this code was written by Dina
 import random as rand
 dest=str(sys.argv[1])#the user inputs the ip destination as the first argument after the filename when running the attack
 nbofpkts=str(sys.argv[2])#the users input the desired number of fragments they'd like to send as the second argument after the destination ip
