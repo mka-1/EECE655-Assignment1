@@ -1,5 +1,5 @@
 from scapy.all import *
-#the code was written by Mohamad and Chloe
+#the code was written by Mohamad, Chloe and Dina
 #from scapy.layers.inet import IP,TCP
 #detecting synflood from a source IP address
 #to detect a synflood attack we can check if a number of TCP packets with syn set to 1 are generated from the same ip source within a specified time interval
